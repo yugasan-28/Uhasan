@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUGASAN S | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', 'particles.json');
+</script>
+
+<body>
+    <div id="particles-js"></div>
+
+    
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Yugasan28A.org</h1>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <h2>Hello, I'm</h2>
+
+    <img src="./myimage.jpeg" alt="profile picture" class="profile-img">
+
+    <h1>Yugasan</h1>
+
+    <p class="role">Aspiring Data Scientist and Prompt Engineer</p>
+
+    <!-- NEW TAGLINE (THIS IS WHAT YOU WANTED) -->
+    <p class="tagline">
+        AI & DS Student | Bridging Technology & Business
+    </p>
+
+    <p class="location">📍 Puducherry,Puducherry,India</p>
+
+    <a href="#projects" class="btn">View My Work</a>
+    <div class="hero-icons">
+  <a href="https://linkedin.com/in/Uhasan S" target="_blank">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+
+  <a href="https://github.com/yugasan-28" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://instagram.com/ft._yuga__.xx" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+  
+  <a href="https://whatsapp.com/9952130796" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <a href="https://gmail.com/yugasansakthivel1@gmail.com" target="_blank">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+  
+</div>
+
+    
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="box about-box">
+
+    <h2>About Me</h2>
+
+    <p>
+      I’m an aspiring <strong>Data scientist and Prompt Engineer</strong> with a passion for turning data
+      into meaningful insights and intelligent solutions.
+    </p>
+
+    <p>
+      I enjoy working at the intersection of data, technology, and problem-solving — building models,
+      analyzing patterns, and designing systems that address real-world challenges.
+    </p>
+
+    <p>
+      Through hands-on projects in AI, data Scientist, and backend development, I’ve developed a strong
+      foundation in c/c++, Machine Learning,Problem Solving and Analytical Thinking.
+    </p>
+	
+<a href="myresume.pdf" class="btn" id="downloadResume">
+  Download Resume
+</a>
+
+<script>
+document.getElementById("downloadResume")
+  .addEventListener("click", async function (event) {
+    event.preventDefault();
+
+    try {
+      const response = await fetch(
+        "./myresume.pdf"
+      );
+
+      if (!response.ok) {
+        throw new Error("PDF file not found");
+      }
+
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "myresume.pdf";
+
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch (error) {
+      alert(
+        "Could not download the resume. Check the PDF path and run the project using a local web server."
+      );
+      console.error(error);
+    }
+  });
+</script>
+
+
+
+
+  </div>
+</section>
+
+
+
+
+<!-- SKILLS -->
+<!-- SKILLS & TOOLS -->
+<section id="skills" class="section gray">
+
+  <!-- SKILLS BOX -->
+  <div class="box skills-box">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <span class="skill-pill">HTML</span>
+      <span class="skill-pill">CSS</span>
+      <span class="skill-pill">Java Script</span>
+      <span class="skill-pill">C-Programming</span>
+      <span class="skill-pill">problem-solving</span>
+    </div>
+  </div>
+
+  <!-- TOOLS BOX -->
+  <div class="box tools-box">
+    <h2>Tools</h2>
+
+    <div class="skills-grid">
+      <span class="skill-pill">Excel</span>
+      <span class="skill-pill">PowerBI</span>
+      <span class="skill-pill">VS-Code</span>
+      <span class="skill-pill">MS-SQL</span>
+      <span class="skill-pill">MS-Word</span>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>SMVEC Web Clonning</h3>
+        <p>
+            Creation of Login Dashboard,Registration page and Home page.
+        </p>
+        <ul>
+            <li>HTML</li>
+            <li>css</li>
+            <li>Java-Script</li>
+        </ul>
+    </div>
+
+    <div class="project-card">
+        <h3>Box-Model</h3>
+        <p>
+            Creation of Template and Audio page. 
+        </p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java-Script</li>
+        </ul>
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section gray">
+
+    <div class="box cert-box">
+
+
+        <h2>Training & Certifications</h2>
+
+        <ul class="cert-list">
+            <li>WEB-APPLICATION-DEVELOPMENT</li>
+            <li>JAVA</li>
+            <li>MS-SQL</li>
+            <li>INTERNET OF THINGS</li>
+            <li>CLOUD-COMPUTING</li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="box contact-box">
+    <h2>Contact</h2>
+
+    <p>Email: yugasansakthivel1@gmail</p>
+
+    <p>
+      LinkedIn:
+      <a href="https://linkedin.com/in/Uhasan S" target="_blank">
+        linkedin.com/in/Uhasan S
+      </a>
+    </p>
+
+    <p>
+      GitHub:
+      <a href="https://github.com/yugasan-28" target="_blank">
+        github.com/yugasan-28
+      </a>
+    </p>
+
+    <p>
+      Whatsapp:
+      <a href="https://whatsapp.com/9952130796" target="_blank">
+        whatsapp.com/9952130796
+      </a>
+    </p>
+	
+    <a href="https://yugasansakthivel1@gmail.com" class="btn" target="_blank">
+      Send Message
+    </a>
+  </div>
+</section>
+
+
+<footer>
+    <p>© 2026 YOUR_COPYRIGHTS | Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
